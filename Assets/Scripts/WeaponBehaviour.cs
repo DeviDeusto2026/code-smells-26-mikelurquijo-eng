@@ -6,10 +6,10 @@ public class WeaponBehaviour : MonoBehaviour
 {
 
     public Transform shootOrigin;
-
+    private int shootingDistance = 1000;
     private void Update()
     {
-        Debug.DrawRay(shootOrigin.position, shootOrigin.forward * 1000, Color.red);
+        Debug.DrawRay(shootOrigin.position, shootOrigin.forward * shootingDistance, Color.red);
 
         if (Input.GetMouseButtonDown(0))
         {
