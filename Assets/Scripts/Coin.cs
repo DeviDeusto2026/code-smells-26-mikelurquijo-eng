@@ -27,7 +27,7 @@ public class Coin : MonoBehaviour
             Destroy(gameObject.GetComponent<Renderer>());
             Destroy(gameObject.GetComponent<Collider>());
             audioSource.Play();
-            Destroy(gameObject, 1);
+            Destroy(gameObject,1);
         }
     }
 
