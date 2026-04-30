@@ -24,8 +24,8 @@ public class Coin : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            //Destroy(gameObject.GetComponent<Renderer>());
-            //Destroy(gameObject.GetComponent<Collider>());
+            Destroy(gameObject.GetComponent<Renderer>());
+            Destroy(gameObject.GetComponent<Collider>());
             audioSource.Play();
             Destroy(gameObject, 1);
         }
