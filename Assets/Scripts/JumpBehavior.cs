@@ -8,6 +8,7 @@ public class JB : MonoBehaviour
     public Rigidbody playerRigidbody;
 
     private int groundCollisions;
+    private int jumpForce = 400;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -31,7 +32,7 @@ public class JB : MonoBehaviour
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 jumpVector = new Vector3(0,1,0) * 400;
+            Vector3 jumpVector = new Vector3(0,1,0) * jumpForce;
             playerRigidbody.AddForce(jumpVector);
         }
     }
